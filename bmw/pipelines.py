@@ -43,6 +43,7 @@ class BmwImagesPipeline(ImagesPipeline):
         image_name = path.replace('full/', '')
         image_path = Path(category_path, image_name)
         print(image_path)
+        image_path = os.path.join(title, image_name)
         return image_path
     # 重写父类的下面两个方法
     def get_media_requests(self, item, info):
